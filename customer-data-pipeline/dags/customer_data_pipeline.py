@@ -26,7 +26,7 @@ with DAG(
         verbose=True
     )
 
-    # Load to BigQuery
+    # Loading to BigQuery
     load_to_bigquery = GCSToBigQueryOperator(
         task_id='load_to_bigquery',
         bucket='customer-data-bucket',
@@ -36,5 +36,5 @@ with DAG(
         write_disposition='WRITE_TRUNCATE'
     )
 
-    # Define task dependencies
+    # task dependencies
     spark_etl_task >> load_to_bigquery
