@@ -14,7 +14,7 @@ with DAG(
     default_args=default_args,
     description='Pipeline to process customer data',
     schedule_interval='@daily',
-    start_date=datetime(2025, 1, 1),
+    start_date=datetime(2024, 1, 1),
 ) as dag:
 
     # Spark ETL task
