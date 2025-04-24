@@ -31,8 +31,7 @@ with DAG(
         bucket='customer-data-bucket',
         source_objects=['processed/customer_purchases_transformed.parquet'],
         destination_project_dataset_table='my_project.customer_dataset.customer_purchases',
-        source_format='PARQUET',
-        write_disposition='WRITE_TRUNCATE'
+        source_format='PARQUET'
     )
 
     # task dependencies
